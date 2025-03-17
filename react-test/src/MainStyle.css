@@ -1,0 +1,44 @@
+/* 공통 스타일 */
+div {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Red Component 스타일 */
+.red-component {
+  background-color: red;
+}
+
+/* Orange Component 스타일 */
+.orange-component {
+  background-color: orange;
+  color: black; /* orange 배경에서는 텍스트가 잘 보이도록 흰색 아닌 검은색으로 */
+}
+
+/* Yellow Component 스타일 */
+.yellow-component {
+  background-color: yellow;
+  color: black; /* 노란색 배경에서 잘 보이도록 검은색 텍스트 */
+}
+
+/* Green Component 스타일 */
+.green-component {
+  background-color: green;
+}
+
+/* Blue Component 스타일 */
+.blue-component {
+  background-color: blue;
+}
+
+/* Navy Component 스타일 */
+.navy-component {
+  background-color: navy;
+  color: white;
+}
+
+/* Purple Component 스타일 */
+.purple-component {
+  background-color: purple;
+}
