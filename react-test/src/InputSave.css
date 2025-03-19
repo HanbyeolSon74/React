@@ -1,0 +1,39 @@
+/* 폼 전체 스타일 */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* 입력 필드 스타일 */
+form .ant-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* 입력 필드 포커스 스타일 */
+form .ant-input:focus {
+  border-color: #d0d3d6;
+}
+
+/* 버튼 스타일 */
+form .ant-btn-primary {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #a8acaf;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+form .ant-btn-primary:hover {
+  background-color: #e8eaeb;
+}

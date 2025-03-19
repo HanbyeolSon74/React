@@ -1,22 +1,35 @@
-import React from "react";
-import LeftSection from "./Left";
-import RightSection from "./Right";
+import React, { useEffect, useState } from "react";
+import InputSave from "./InputSave";
+import ShowTable from "./ShowTable";
 
-const MainPage2 = () => {
+const MainPage1 = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem("userList")) || [];
+    setList(storedData);
+  }, []);
+
+  // 데이터 추가
+  const handleAdd = (newItem) => {
+    const newList = [...list, { ...newItem, key: list.length }];
+    setList(newList);
+    localStorage.setItem("userList", JSON.stringify(newList));
+  };
+
+  // 데이터 삭제
+  const handleDelete = (key) => {
+    const updatedList = list.filter((item) => item.key !== key);
+    setList(updatedList);
+    localStorage.setItem("userList", JSON.stringify(updatedList));
+  };
+
   return (
-    <div
-      style={{
-        maxwidth: 1280,
-        display: "flex",
-        justifyContent: "center",
-        gap: "20px",
-        marginTop: 100,
-      }}
-    >
-      <LeftSection />
-      <RightSection />
-    </div>
+    <>
+      <InputSave onAdd={handleAdd} />
+      <ShowTable data={list} onDelete={handleDelete} />
+    </>
   );
 };
 
-export default MainPage2;
+export default MainPage1;

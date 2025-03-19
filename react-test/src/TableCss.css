@@ -1,0 +1,56 @@
+/* 버튼 컨테이너 스타일 */
+.button-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* 버튼 스타일 */
+.button-container .ant-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.button-container .ant-btn:hover {
+  opacity: 0.8;
+}
+
+/* 테이블 전체 스타일 */
+.custom-table {
+  margin-top: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 테이블 헤더 스타일 */
+.ant-table-thead > tr > th {
+  font-weight: bold;
+  text-align: center !important; /* 헤더 가운데 정렬 */
+  color: #333;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+/* 테이블 바디 스타일 */
+.ant-table-tbody > tr > td {
+  text-align: center !important; /* 바디 가운데 정렬 */
+  padding: 12px;
+}
+
+/* 삭제 버튼 스타일 */
+.ant-btn-danger {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+}
+
+.ant-btn-danger:hover {
+  background-color: #ff7875;
+}
+
+/* 테이블 행 hover 스타일 */
+.ant-table-tbody > tr:hover > td {
+  background-color: #fafafa;
+}
